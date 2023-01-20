@@ -34,6 +34,8 @@ zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
+  'emacs' \
+  'osx' \
   'history' \
   'directory' \
   'spectrum' \
@@ -44,6 +46,7 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'syntax-highlighting' \
   'autosuggestions'
+
 
 #
 # Autosuggestions
