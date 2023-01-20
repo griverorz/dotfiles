@@ -1,3 +1,4 @@
+
 #
 # Sets Prezto options.
 #
@@ -41,24 +42,25 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'python' \
   'completion' \
-  'prompt' \
   'git' \
   'syntax-highlighting' \
-  'autosuggestions'
-
+  'autosuggestions' \
+  'history-substring-search' \
+  'prompt'
 
 #
 # Autosuggestions
 #
 
 # Set the query found color.
-# zstyle ':prezto:module:autosuggestions:color' found ''
+zstyle ':prezto:module:autosuggestions:color' color 'yes'
+zstyle ':prezto:module:autosuggestions:color' found ''
 
 #
 # Completions
 #
 
-# Set the entries to ignore in static */etc/hosts* for host completion.
+# Set the entries to ignore in static '/etc/hosts' for host completion.
 # zstyle ':prezto:module:completion:*:hosts' etc-host-ignores \
 #   '0.0.0.0' '127.0.0.1'
 
@@ -90,6 +92,19 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # zstyle ':prezto:module:gnu-utility' prefix 'g'
 
 #
+# History
+#
+
+# Set the file to save the history in when an interactive shell exits.
+# zstyle ':prezto:module:history' histfile "${ZDOTDIR:-$HOME}/.zsh_history"
+
+# Set the maximum  number  of  events  stored  in  the  internal history list.
+# zstyle ':prezto:module:history' histsize 10000
+
+# Set the maximum number of history events to save in the history file.
+# zstyle ':prezto:module:history' savehist 10000
+
+#
 # History Substring Search
 #
 
@@ -107,7 +122,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 #
 
 # Set the keyword used by `mand` to open man pages in Dash.app
-# zstyle ':prezto:module:osx:man' dash-keyword 'manpages'
+zstyle ':prezto:module:osx:man' dash-keyword 'manpages'
 
 #
 # Pacman
@@ -139,12 +154,13 @@ zstyle ':prezto:module:prompt' theme 'paradox'
 #
 
 # Auto switch the Python virtualenv on directory change.
-# zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
+zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 
 # Automatically initialize virtualenvwrapper if pre-requisites are met.
 # zstyle ':prezto:module:python:virtualenv' initialize 'yes'
 zstyle ':prezto:module:python' skip-virtualenvwrapper-init 'on'
 zstyle ':prezto:module:python' conda-init 'on'
+
 
 #
 # Ruby

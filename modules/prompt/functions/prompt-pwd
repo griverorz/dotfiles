@@ -18,7 +18,7 @@ if [[ "$current_pwd" == (#m)[/~] ]]; then
 elif zstyle -m ':prezto:module:prompt' pwd-length 'full'; then
   ret_directory=${PWD}
 elif zstyle -m ':prezto:module:prompt' pwd-length 'long'; then
-  ret_directory=${current_pwd}
+  ret_directory="${current_pwd}"
 else
   ret_directory="${current_pwd}"
 fi
