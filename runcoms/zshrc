@@ -23,11 +23,16 @@ alias sdemacs="/usr/local/bin/emacsclient -e \"(kill-emacs)\""
 alias jn=emacsclient -nw -e launch-journal
 alias R=R --no-save --no-restore
 
+export ANSIBLE_NOCOWS=1
+
 test -e $HOME/.iterm2_shell_integration.zsh && source $HOME/.iterm2_shell_integration.zsh
+source $HOME/.iterm2_shell_integration.zsh
 
 # Custom PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/texlive/2020/bin/x86_64-darwin/:$PATH
+export PATH=$PATH:$HOME/go/bin
+
 
 eval "$(pyenv init --path)"
 
@@ -45,15 +50,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-=======
-
-export ANSIBLE_NOCOWS=1
-
-source /Users/gonzalorivero/.iterm2_shell_integration.zsh
-source /usr/local/bin/virtualenvwrapper.sh
-
-export PATH=$PATH:/Users/gonzalorivero/.local/bin
-export PATH=$PATH:/Users/gonzalorivero/go/bin
 
 ## Ruby
 eval "$(rbenv init -)"
@@ -70,6 +66,4 @@ fd() {
 fh() {
   eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
 }
-
->>>>>>> 20643491f90987835f1519f7bbeb29f9313fbb46
 
