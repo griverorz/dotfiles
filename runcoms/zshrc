@@ -33,9 +33,6 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/texlive/2020/bin/x86_64-darwin/:$PATH
 export PATH=$PATH:$HOME/go/bin
 
-
-eval "$(pyenv init --path)"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/grivero/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
