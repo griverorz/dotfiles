@@ -38,30 +38,7 @@ unset _pmh_{hist{file,size},savehist}
 # Aliases
 #
 
-# Lists the ten most used commands.
-alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
-
-if [[ -s "${OLD_HISTFILE::=${HISTFILE:h}/.zhistory}" ]]; then
-
-  # New 'HISTFILE' doesn't exist yet, rename legacy one if available and notify.
-  if [[ ! -s "$HISTFILE" ]]; then
-    <<EON
-NOTICE: Default path of 'HISTFILE' has changed from '${OLD_HISTFILE/#$HOME/~}'
-        to '${HISTFILE/#$HOME/~}'.
-        Attempting to rename the existing 'HISTFILE' ...
-EON
-    command mv -v "$OLD_HISTFILE" "$HISTFILE"
-
-  # New 'HISTFILE' does exist and is older than legacy one, just warn.
-  elif [[ "$OLD_HISTFILE" -nt "$HISTFILE" ]]; then
-    <<EOW
-WARNING: Default path of 'HISTFILE' has changed from '${OLD_HISTFILE/#$HOME/~}'
-         to '${HISTFILE/#$HOME/~}'.
-         Either set 'HISTFILE' in '${${0:h}/#$HOME/~}'
-         or move previous history from '${OLD_HISTFILE/#$HOME/~}' to
-         '${HISTFILE/#$HOME/~}'.
-EOW
-  fi
-
-  unset OLD_HISTFILE
+if ! zstyle -t ':prezto:module:history:alias' skip; then
+  # Lists the ten most used commands.
+  alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
 fi
