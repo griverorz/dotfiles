@@ -37,14 +37,13 @@ zstyle ':prezto:load' pmodule \
   'emacs' \
   'osx' \
   'history' \
-  'directory' \
   'spectrum' \
   'utility' \
   'python' \
   'completion' \
   'git' \
-  'syntax-highlighting' \
   'autosuggestions' \
+  'syntax-highlighting' \
   'history-substring-search' \
   'prompt'
 

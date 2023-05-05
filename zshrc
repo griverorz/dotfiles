@@ -19,13 +19,10 @@ alias sdemacs="/usr/local/bin/emacsclient -e \"(kill-emacs)\""
 alias jn=emacsclient -nw -e launch-journal
 alias R=R --no-save --no-restore
 
-export PATH=$PATH:/usr/local/texlive/2018/bin/x86_64-darwin:/usr/local/bin
-
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 source /Users/gonzalorivero/.iterm2_shell_integration.zsh
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
-
 
 
 # fd - cd to selected directory
