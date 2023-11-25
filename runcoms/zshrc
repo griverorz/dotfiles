@@ -51,3 +51,6 @@ export PYTHON=/usr/local/Caskroom/miniconda/base/bin/python
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-14.0.2.jdk/Contents/Home
 export MINICONDA=/usr/local/Caskroom/miniconda/base/bin:/usr/local/Caskroom/miniconda/base/condabin
 export PATH=$HOME/.rbenv/shims:$MINICONDA:/usr/local/texlive/2023/bin/universal-darwin:$HOME/.pyenv/shims:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/go/bin:$JAVA_HOME
+
+# WORKON
+export WORKON_HOME=$HOME/conda/envs

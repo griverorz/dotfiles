@@ -52,6 +52,7 @@ path=(
   $HOME/{,s}bin(N)
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
+  /usr/local/texlive/2023/bin/universal-darwin(N)
   $path
 )
 
