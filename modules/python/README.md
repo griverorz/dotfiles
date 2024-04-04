@@ -13,7 +13,7 @@ disable _virtualenvwrapper_, add the following to
 _`${ZDOTDIR:-$HOME}/.zpreztorc`_.
 
 ```sh
-zstyle ':prezto:module:python' skip-virtualenvwrapper-init 'on'
+zstyle ':prezto:module:python:virtualenv' initialize 'no'
 ```
 
 Conda support can be enabled by adding the following to
@@ -123,6 +123,13 @@ zstyle ':prezto:module:python:virtualenv' initialize 'no'
 ```
 
 ## Aliases
+
+Aliases are enabled by default. To disable them, add the following to
+_`${ZDOTDIR:-$HOME}/.zpreztorc`_.
+
+```sh
+zstyle ':prezto:module:python:alias' skip 'yes'
+```
 
 - `py` is short for `python`.
 - `py2` is short for `python2`.
